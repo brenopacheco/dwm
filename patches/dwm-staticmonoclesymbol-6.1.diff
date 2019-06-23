@@ -1,0 +1,18 @@
+diff -uN a/dwm.c b/dwm.c
+--- a/dwm.c	2015-11-08 22:39:37.000000000 +0000
++++ b/dwm.c	2019-06-22 10:32:58.249941169 +0100
+@@ -1117,14 +1117,8 @@
+ void
+ monocle(Monitor *m)
+ {
+-	unsigned int n = 0;
+ 	Client *c;
+ 
+-	for (c = m->clients; c; c = c->next)
+-		if (ISVISIBLE(c))
+-			n++;
+-	if (n > 0) /* override layout symbol */
+-		snprintf(m->ltsymbol, sizeof m->ltsymbol, "[%d]", n);
+ 	for (c = nexttiled(m->clients); c; c = nexttiled(c->next))
+ 		resize(c, m->wx, m->wy, m->ww - 2 * c->bw, m->wh - 2 * c->bw, 0);
+ }
