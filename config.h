@@ -49,7 +49,7 @@ static const Rule rules[] = {
 		{ "whatsdesk",        NULL,     "WhatsDesk", 1 << 8,    1,          0,          -1 },
 		{ "Skype",            NULL,     NULL,        1 << 8,    1,          0,          -1 },
 		{ "Gnome-calculator", NULL,     NULL,        0,         1,          1,          -1 },
-		{ "Projects",         "Gitg",   "Gitg",      0,         1,          1,          -1 },
+		{ "Gitg",         	  "gitg",   "Projects",  0,         1,          1,          -1 },
 		{ "URxvt",            "urxvt",  NULL,        0,		    1,          0,          -1 },
 		{ "Gvim", 			  "gvim",   NULL,        0,         1,          1,          -1 },
 };
@@ -88,8 +88,8 @@ static const char *rangercmd[] = {"urxvt", "-e", "sh", "-c", "ranger", NULL};
 static const char *upvol[]   = { "pactl", "set-sink-volume", "0", "+5%",     NULL };
 static const char *downvol[] = { "pactl", "set-sink-volume", "0", "-5%",     NULL };
 static const char *mutevol[] = { "pactl", "set-sink-mute",   "0", "toggle",  NULL };
-static const char *upbrightness[]   = { "xbacklight", "-inc", "10", NULL };
-static const char *downbrightness[] = { "xbacklight", "-dec", "10", NULL };
+static const char *upbrightness[]   = { "brightness", "up", NULL };
+static const char *downbrightness[] = { "brightness", "up", NULL };
 static const char *moveup[] = { "movewindow", "k", "10", NULL };
 static const char *movedown[] = { "movewindow", "j", "10", NULL };
 static const char *moveleft[] = { "movewindow", "h", "10", NULL };
