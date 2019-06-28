@@ -81,7 +81,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-i", "-l", "20", "-m",  dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+static const char *dmenucmd[] = { "dmenu_dwm", "-m",  dmenumon, NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
 static const char *browsercmd[] = {"browse", NULL};
 static const char *rangercmd[] = {"urxvt", "-e", "sh", "-c", "ranger", NULL};
@@ -90,10 +90,10 @@ static const char *downvol[] = { "pactl", "set-sink-volume", "0", "-5%",     NUL
 static const char *mutevol[] = { "pactl", "set-sink-mute",   "0", "toggle",  NULL };
 static const char *upbrightness[]   = { "brightness", "up", NULL };
 static const char *downbrightness[] = { "brightness", "up", NULL };
-static const char *moveup[] = { "movewindow", "k", "10", NULL };
-static const char *movedown[] = { "movewindow", "j", "10", NULL };
-static const char *moveleft[] = { "movewindow", "h", "10", NULL };
-static const char *moveright[] = { "movewindow", "l", "10", NULL };
+static const char *moveup[] = { "move", "k", "10", NULL };
+static const char *movedown[] = { "move", "j", "10", NULL };
+static const char *moveleft[] = { "move", "h", "10", NULL };
+static const char *moveright[] = { "move", "l", "10", NULL };
 static const char *dpdf[] = { "dpdf", NULL };
 
 static Key keys[] = {
