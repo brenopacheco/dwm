@@ -20,7 +20,7 @@ static const unsigned int gappx     = 10;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const double defaultopacity  = 0.9;
+static const double defaultopacity  = 0.85;
 
 /* tagging */
 static const char *tags[]    = { "", "", "", "", "", "",  "", "", "" };
@@ -43,15 +43,18 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	
-		/* class,             instance, title,       tags mask, iscentered, isfloating, monitor */
-		{ "Gimp",             NULL,     NULL,        0,         1,          1,          -1 },
-		{ "Firefox",          NULL,     NULL,        0,         1,          0,          -1 },
-		{ "whatsdesk",        NULL,     "WhatsDesk", 1 << 8,    1,          0,          -1 },
-		{ "Skype",            NULL,     NULL,        1 << 8,    1,          0,          -1 },
-		{ "Gnome-calculator", NULL,     NULL,        0,         1,          1,          -1 },
-		{ "Gitg",         	  "gitg",   "Projects",  0,         1,          1,          -1 },
-		{ "URxvt",            "urxvt",  NULL,        0,		    1,          0,          -1 },
-		{ "Gvim", 			  "gvim",   NULL,        0,         1,          1,          -1 },
+		/* class,               instance,         title,       tags mask, iscentered, isfloating, monitor */
+		{ "Gimp",             NULL,             NULL,        0,         1,          1,          -1 },
+		{ "Firefox",          NULL,             NULL,        0,         1,          0,          -1 },
+		{ "whatsdesk",        NULL,             "WhatsDesk", 1 << 8,    1,          0,          -1 },
+		{ "Skype",            NULL,             NULL,        1 << 8,    1,          0,          -1 },
+		{ "Gnome-calculator", NULL,             NULL,        0,         1,          1,          -1 },
+		{ "Gitg",             "gitg",           "Projects",  0,         1,          1,          -1 },
+		{ "URxvt",            "urxvt",          NULL,        0,         1,          0,          -1 },
+		{ "Gvim",             "gvim",           NULL,        0,         1,          1,          -1 },
+		{ "Nemo",             "nemo",           NULL,        0,         1,          1,          -1 },
+		{ "Lxappearance",     "lxappearance",   NULL,        0,         1,          1,          -1 },
+		{ "Xfce4-appfinder",   "xfce4-appfinder", NULL,        0,         1,          1,          -1 },
 };
 
 /* layout(s) */
@@ -84,23 +87,17 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_dwm", "-m",  dmenumon, NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
 static const char *browsercmd[] = {"browse", NULL};
+static const char *nemo[] = {"nemo", NULL};
+static const char *appfinder[] = {"xfce4-appfinder", NULL};
 static const char *rangercmd[] = {"urxvt", "-e", "sh", "-c", "ranger", NULL};
-static const char *upvol[]   = { "pactl", "set-sink-volume", "0", "+5%",     NULL };
-static const char *downvol[] = { "pactl", "set-sink-volume", "0", "-5%",     NULL };
-static const char *mutevol[] = { "pactl", "set-sink-mute",   "0", "toggle",  NULL };
-static const char *upbrightness[]   = { "brightness", "up", NULL };
-static const char *downbrightness[] = { "brightness", "up", NULL };
-static const char *moveup[] = { "move", "k", "10", NULL };
-static const char *movedown[] = { "move", "j", "10", NULL };
-static const char *moveleft[] = { "move", "h", "10", NULL };
-static const char *moveright[] = { "move", "l", "10", NULL };
 static const char *dpdf[] = { "dpdf", NULL };
 
 static Key keys[] = {
 	/* modifier,                       key,                      function,       argument */
 	{ MODKEY,                       XK_F5,                    xrdb,           {.v = NULL } },
 	{ MODKEY,                       XK_d,                     spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_p,                     spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_p,                     spawn,          {.v = appfinder } },
+	{ MODKEY,                       XK_n,                     spawn,          {.v = nemo } },
 	{ MODKEY,                       XK_w,                     spawn,          {.v = browsercmd } },
 	{ MODKEY,                       XK_r,                     spawn,          {.v = rangercmd } },
 	{ MODKEY,                       XK_Return,                spawn,          {.v = termcmd } },
@@ -140,15 +137,6 @@ static Key keys[] = {
 	{ MODKEY|ControlMask|ShiftMask, XK_q,                     quit,           {1} },
 	{ MODKEY|ShiftMask,             XK_j,                     pushdown,       {0} },
 	{ MODKEY|ShiftMask,             XK_k,                     pushup,         {0} },
-	{ 0,                            XF86XK_AudioLowerVolume,  spawn,          {.v = downvol } },
-	{ 0,                            XF86XK_AudioMute,         spawn,          {.v = mutevol } },
-	{ 0,                            XF86XK_AudioRaiseVolume,  spawn,          {.v = upvol } },
-	{ 0,                            XF86XK_KbdBrightnessDown, spawn,          {.v = downbrightness } },
-	{ 0,                            XF86XK_KbdBrightnessUp,   spawn,          {.v = upbrightness } },
-	{ MODKEY|ControlMask,           XK_k,                     spawn,          {.v = moveup } },
-	{ MODKEY|ControlMask,           XK_j,                     spawn,          {.v = movedown } },
-	{ MODKEY|ControlMask,           XK_h,                     spawn,          {.v = moveleft } },
-	{ MODKEY|ControlMask,           XK_l,                     spawn,          {.v = moveright } },
 	TAGKEYS(						XK_1, 								  	  0)
 	TAGKEYS(						XK_2, 								  	  1)
 	TAGKEYS(						XK_3, 								  	  2)
@@ -185,3 +173,22 @@ static Signal signals[] = {
 	/* signum       function        argument  */
 	{ 1,            setlayout,      {.v = 0} },
 };
+
+// static const char *upvol[]   = { "pactl", "set-sink-volume", "0", "+5%",     NULL };
+// static const char *downvol[] = { "pactl", "set-sink-volume", "0", "-5%",     NULL };
+// static const char *mutevol[] = { "pactl", "set-sink-mute",   "0", "toggle",  NULL };
+// static const char *upbrightness[]   = { "xbacklight", "+5%", NULL };
+// static const char *downbrightness[] = { "xbacklight", "-5%", NULL };
+// static const char *moveup[] = { "move", "k", "10", NULL };
+// static const char *movedown[] = { "move", "j", "10", NULL };
+// static const char *moveleft[] = { "move", "h", "10", NULL };
+// static const char *moveright[] = { "move", "l", "10", NULL };
+	// { MODKEY|ControlMask,           XK_k,                     spawn,          {.v = moveup } },
+	// { MODKEY|ControlMask,           XK_j,                     spawn,          {.v = movedown } },
+	// { MODKEY|ControlMask,           XK_h,                     spawn,          {.v = moveleft } },
+	// { MODKEY|ControlMask,           XK_l,                     spawn,          {.v = moveright } },
+	// { 0,                            XF86XK_AudioLowerVolume,  spawn,          {.v = downvol } },
+	// { 0,                            XF86XK_AudioMute,         spawn,          {.v = mutevol } },
+	// { 0,                            XF86XK_AudioRaiseVolume,  spawn,          {.v = upvol } },
+	// { 0,                            XF86XK_KbdBrightnessDown, spawn,          {.v = downbrightness } },
+	// { 0,                            XF86XK_KbdBrightnessUp,   spawn,          {.v = upbrightness } },
