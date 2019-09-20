@@ -43,18 +43,19 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	
-		/* class,               instance,         title,       tags mask, iscentered, isfloating, monitor */
-		{ "Gimp",             NULL,             NULL,        0,         1,          1,          -1 },
-		{ "Firefox",          NULL,             NULL,        0,         1,          0,          -1 },
-		{ "whatsdesk",        NULL,             "WhatsDesk", 1 << 8,    1,          0,          -1 },
-		{ "Skype",            NULL,             NULL,        1 << 8,    1,          0,          -1 },
-		{ "Gnome-calculator", NULL,             NULL,        0,         1,          1,          -1 },
-		{ "Gitg",             "gitg",           "Projects",  0,         1,          1,          -1 },
-		{ "URxvt",            "urxvt",          NULL,        0,         1,          0,          -1 },
-		{ "Gvim",             "gvim",           NULL,        0,         1,          1,          -1 },
-		{ "Nemo",             "nemo",           NULL,        0,         1,          1,          -1 },
-		{ "Lxappearance",     "lxappearance",   NULL,        0,         1,          1,          -1 },
-		{ "Xfce4-appfinder",   "xfce4-appfinder", NULL,        0,         1,          1,          -1 },
+		/*class,              instance,          title,                          tags mask, iscentered, isfloating, monitor */
+		{ NULL,               NULL,              "Apache NetBeans 11.1",         1 << 3,    1,          0,          -1 },
+		{ "Gimp",             NULL,              NULL,                           0,         1,          1,          -1 },
+		{ "Firefox",          NULL,              NULL,                           0,         1,          0,          -1 },
+		{ "whatsdesk",        NULL,              "WhatsDesk",                    1 << 8,    1,          0,          -1 },
+		{ "Skype",            NULL,              NULL,                           1 << 8,    1,          0,          -1 },
+		{ "Gnome-calculator", NULL,              NULL,                           0,         1,          1,          -1 },
+		{ "Gitg",             "gitg",            NULL,		                     0,         1,          1,          -1 },
+		{ "Nemo",             "nemo",            NULL,                           0,         1,          1,          -1 },
+		{ "URxvt",            "urxvt",           NULL,                           0,         1,          0,          -1 },
+		{ "Gvim",             "gvim",            NULL,                           0,         1,          1,          -1 },
+		{ "Lxappearance",     "lxappearance",    NULL,                           0,         1,          1,          -1 },
+		{ "Xfce4-appfinder",  "xfce4-appfinder", NULL,                           0,         1,          1,          -1 },
 };
 
 /* layout(s) */
