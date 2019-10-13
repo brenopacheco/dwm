@@ -363,7 +363,7 @@ cursor	drw.h	/^	Cursor cursor;$/;"	m	struct:__anon0f5116480208	typeref:typename:
 cursor	dwm.c	/^static Cur *cursor[CurLast];$/;"	v	typeref:typename:Cur * []	file:
 curtag	dwm.c	/^	unsigned int curtag, prevtag; \/* current and previous tag *\/$/;"	m	struct:Pertag	typeref:typename:unsigned int	file:
 def_layouts	config.h	/^static int def_layouts[1 + LENGTH(tags)] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};$/;"	v	typeref:typename:int[]
-defaultopacity	config.h	/^static const double defaultopacity = 1;$/;"	v	typeref:typename:const double
+defaultopacity	config.h	/^static const double defaultopacity = 0.9;$/;"	v	typeref:typename:const double
 descent	drw.h	/^	int descent;$/;"	m	struct:__anon0f5116480308	typeref:typename:int
 destroynotify	dwm.c	/^destroynotify(XEvent *e)$/;"	f	typeref:typename:void
 detach	dwm.c	/^detach(Client *c)$/;"	f	typeref:typename:void
@@ -487,7 +487,6 @@ mw	dwm.c	/^	int mx, my, mw, mh;   \/* screen size *\/$/;"	m	struct:Monitor	typer
 mx	dwm.c	/^	int mx, my, mw, mh;   \/* screen size *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
 my	dwm.c	/^	int mx, my, mw, mh;   \/* screen size *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
 name	dwm.c	/^	char name[256];$/;"	m	struct:Client	typeref:typename:char[256]	file:
-nemo	config.h	/^static const char *nemo[] = {"nemo", NULL};$/;"	v	typeref:typename:const char * []
 netatom	dwm.c	/^static Atom wmatom[WMLast], netatom[NetLast];$/;"	v	typeref:typename:Atom[][]	file:
 neverfocus	dwm.c	/^	int isfixed, iscentered, isfloating, isurgent, neverfocus, oldstate, isfullscreen;$/;"	m	struct:Client	typeref:typename:int	file:
 next	dwm.c	/^	Client *next;$/;"	m	struct:Client	typeref:typename:Client *	file:
@@ -522,7 +521,6 @@ propertynotify	dwm.c	/^propertynotify(XEvent *e)$/;"	f	typeref:typename:void
 pushdown	push.c	/^pushdown(const Arg *arg) {$/;"	f	typeref:typename:void	file:
 pushup	push.c	/^pushup(const Arg *arg) {$/;"	f	typeref:typename:void	file:
 quit	dwm.c	/^quit(const Arg *arg)$/;"	f	typeref:typename:void
-rangercmd	config.h	/^static const char *rangercmd[] = {"urxvt", "-e", "sh", "-c", "ranger", NULL};$/;"	v	typeref:typename:const char * []
 recttomon	dwm.c	/^recttomon(int x, int y, int w, int h)$/;"	f	typeref:typename:Monitor *
 resize	dwm.c	/^resize(Client *c, int x, int y, int w, int h, int interact)$/;"	f	typeref:typename:void
 resizeclient	dwm.c	/^resizeclient(Client *c, int x, int y, int w, int h)$/;"	f	typeref:typename:void
@@ -587,11 +585,11 @@ tabmode	dwm.c	/^tabmode(const Arg *arg)$/;"	f	typeref:typename:void
 tabwin	dwm.c	/^	Window tabwin;$/;"	m	struct:Monitor	typeref:typename:Window	file:
 tag	dwm.c	/^tag(const Arg *arg)$/;"	f	typeref:typename:void
 tagmon	dwm.c	/^tagmon(const Arg *arg)$/;"	f	typeref:typename:void
-tags	config.h	/^static const char *tags[] = {"", "", "", "", "", "", "", "", ""};$/;"	v	typeref:typename:const char * []
+tags	config.h	/^static const char *tags[] = {"", "", "", "", "", "", "漣", "", ""};$/;"	v	typeref:typename:const char * []
 tags	dwm.c	/^	unsigned int tags;$/;"	m	struct:Client	typeref:typename:unsigned int	file:
 tags	dwm.c	/^	unsigned int tags;$/;"	m	struct:__anon0f53a99e0b08	typeref:typename:unsigned int	file:
 tagset	dwm.c	/^	unsigned int tagset[2];$/;"	m	struct:Monitor	typeref:typename:unsigned int[2]	file:
-termcmd	config.h	/^static const char *termcmd[] = {"urxvt", NULL};$/;"	v	typeref:typename:const char * []
+termcmd	config.h	/^static const char *termcmd[] = {"kitty", NULL};$/;"	v	typeref:typename:const char * []
 th	dwm.c	/^static int th = 0;           \/* tab bar geometry *\/$/;"	v	typeref:typename:int	file:
 tile	dwm.c	/^tile(Monitor *m)$/;"	f	typeref:typename:void
 title	dwm.c	/^	const char *title;$/;"	m	struct:__anon0f53a99e0b08	typeref:typename:const char *	file:

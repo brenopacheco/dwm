@@ -5,7 +5,9 @@
 
 /* appearance */
 static const char *xres = "/home/breno/.Xresources";
+/* using nerdfonts for icons */
 static const char *fonts[] = {
+    "UbuntuMono Nerd Font:size=12",
     "ubuntumono:size=13",
 };
 static const char dmenufont[] = "ubuntumono:size=12";
@@ -20,11 +22,10 @@ static const unsigned int gappx = 10;   /* gaps between windows */
 static const unsigned int snap = 32;    /* snap pixel */
 static const int showbar = 1;           /* 0 means no bar */
 static const int topbar = 1;            /* 0 means bottom bar */
-/* static const double defaultopacity  = 0.85; */
-static const double defaultopacity = 1;
+static const double defaultopacity = 0.9;
 
 /* tagging */
-static const char *tags[] = {"", "", "", "", "", "", "", "", ""};
+static const char *tags[] = {"", "", "", "", "", "", "漣", "", ""};
 
 /*   Display modes of the tab bar: never shown, always shown, shown only in */
 /*   monocle mode in presence of several windows.                           */
@@ -44,25 +45,21 @@ static const Bool toptab = False;        /* False means bottom tab bar */
 /* tags[i]. Layout is referred using the layouts array index.*/
 static int def_layouts[1 + LENGTH(tags)] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
+/* xprop(1):
+ *	WM_CLASS(STRING) = instance, class
+ *	WM_NAME(STRING) = title
+ */
+/*class, instance, title, tagsmask, iscentered, isfloating, monitor */
 static const Rule rules[] = {
-    /* xprop(1):
-     *	WM_CLASS(STRING) = instance, class
-     *	WM_NAME(STRING) = title
-     */
-
-    /*class,              instance,          title, tags mask, iscentered,
-       isfloating, monitor */
-    {NULL, NULL, "Apache NetBeans 11.1", 1 << 3, 1, 0, -1},
-    {"Gimp", NULL, NULL, 0, 1, 1, -1},
     {"Firefox", NULL, NULL, 0, 1, 0, -1},
     {"whatsdesk", NULL, "WhatsDesk", 1 << 8, 1, 0, -1},
     {"Skype", NULL, NULL, 1 << 8, 1, 0, -1},
     {"Gnome-calculator", NULL, NULL, 0, 1, 1, -1},
-    {"Gitg", "gitg", NULL, 0, 1, 1, -1},
     {"Nemo", "nemo", NULL, 0, 1, 1, -1},
     {"URxvt", "urxvt", NULL, 0, 1, 0, -1},
+    {"kitty", "kitty", NULL, 0, 1, 0, -1},
+    {"st-256color", "st-256color", "st", 0, 1, 0, -1},
     {"Gvim", "gvim", NULL, 0, 1, 1, -1},
-    {"Lxappearance", "lxappearance", NULL, 0, 1, 1, -1},
     {"Zathura", "zathura", NULL, 0, 1, 1, -1},
     {"Xfce4-appfinder", "xfce4-appfinder", NULL, 0, 1, 1, -1}};
 
@@ -90,18 +87,17 @@ static const Layout layouts[] = {
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd)                                                             \
   {                                                                            \
-    .v = (const char *[]) { "/bin/sh", "-c", cmd, NULL }                       \
+    .v = (const char *[]) { "/bin/bash", "-c", cmd, NULL }                     \
   }
 
 /* commands */
 static char dmenumon[2] =
     "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = {"dmenu_dwm", "-m", dmenumon, NULL};
-static const char *termcmd[] = {"urxvt", NULL};
+static const char *termcmd[] = {"kitty", NULL};
 static const char *browsercmd[] = {"browse", NULL};
-static const char *nemo[] = {"nemo", NULL};
+/* static const char *nemo[] = {"nemo", NULL}; */
 static const char *appfinder[] = {"xfce4-appfinder", NULL};
-static const char *rangercmd[] = {"urxvt", "-e", "sh", "-c", "ranger", NULL};
 static const char *dpdf[] = {"dpdf", NULL};
 // static const char *upvol[]   = { "pulseaudio-ctl", "up", NULL };
 // static const char *downvol[] = { "pulseaudio-ctl", "down", NULL };
@@ -112,10 +108,8 @@ static Key keys[] = {
        argument */
     {MODKEY, XK_F5, xrdb, {.v = NULL}},
     {MODKEY, XK_d, spawn, {.v = dmenucmd}},
-    {MODKEY, XK_p, spawn, {.v = appfinder}},
-    {MODKEY, XK_n, spawn, {.v = nemo}},
+    {MODKEY, XK_apostrophe, spawn, {.v = appfinder}},
     {MODKEY, XK_w, spawn, {.v = browsercmd}},
-    {MODKEY, XK_r, spawn, {.v = rangercmd}},
     {MODKEY, XK_Return, spawn, {.v = termcmd}},
     {MODKEY, XK_z, spawn, {.v = dpdf}},
     {MODKEY | ShiftMask, XK_s, spawn, SHCMD("transset-df -a --dec .05")},
@@ -125,6 +119,8 @@ static Key keys[] = {
     {MODKEY, XK_e, tabmode, {-1}},
     {MODKEY, XK_j, focusstack, {.i = +1}},
     {MODKEY, XK_k, focusstack, {.i = -1}},
+    {MODKEY, XK_n, focusstack, {.i = +1}},
+    {MODKEY, XK_p, focusstack, {.i = -1}},
     {MODKEY, XK_o, incnmaster, {.i = +1}},
     {MODKEY, XK_i, incnmaster, {.i = -1}},
     {MODKEY, XK_h, setmfact, {.f = -0.05}},
