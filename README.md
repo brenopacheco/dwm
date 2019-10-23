@@ -1,6 +1,8 @@
 # DWM 6.1 compatible patches
-![gif test](./screenshot.png.gif)
-![gif test](./simplescreenrecorder.gif)
+![picture](./screenshot.png)  
+
+![gif test2](./simplescreenrecorder.gif)  
+
 ![gif test](./peek.gif)
 
 
