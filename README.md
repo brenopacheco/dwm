@@ -1,5 +1,7 @@
 # DWM 6.1 compatible patches
+![gif test](./screenshot.png.gif)
 ![gif test](./simplescreenrecorder.gif)
+![gif test](./peek.gif)
 
 
 This repository contains my personal use patched  DWM and 
