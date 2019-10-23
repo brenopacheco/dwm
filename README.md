@@ -1,4 +1,7 @@
 # DWM 6.1 compatible patches
+![gif test](./simplescreenrecorder.gif)
+
+
 This repository contains my personal use patched  DWM and 
 the diff files found in suckless.org, modified to fit the 6.1 version.  
 * The patches in ./patches folder are cross-compatible and may all be

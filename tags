@@ -12,7 +12,7 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -1,4 +1,5	patches/dwm-push-6.1.diff	/^@@ -1,4 +1,5 @@$/;"	h	modifiedFile:a/config.h
 -1,5 +1,7	patches/dwm-zoomswap-6.1.diff	/^@@ -1,5 +1,7 @@$/;"	h	modifiedFile:a/config.h
 -1013,6 +1020,47	patches/dwm-fsignal-6.1.diff	/^@@ -1013,6 +1020,47 @@$/;"	h	modifiedFile:a/dwm.c
--1018,7 +1130,7	other_patches/dwm-systray-6.1.diff	/^@@ -1018,7 +1130,7 @@$/;"	h	modifiedFile:a/dwm.c
+-1025,6 +1120,8	other_patches/dwm-systray-6.1.diff	/^@@ -1025,6 +1120,8 @@$/;"	h	modifiedFile:a/dwm.c
 -1030,6 +1048,23	patches/dwm-xrdb-6.1.diff	/^@@ -1030,6 +1048,23 @@$/;"	h	modifiedFile:a/dwm.c
 -1039,6 +1053,7	patches/dwm-transparency-6.1.diff	/^@@ -1039,6 +1053,7 @@$/;"	h	modifiedFile:a/dwm.c
 -104,6 +113,12	patches/dwm-pertag-tab-6.1.diff	/^@@ -104,6 +113,12 @@$/;"	h	modifiedFile:a/dwm.1
@@ -20,40 +20,34 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -107,6 +107,12	patches/dwm-fsignal-6.1.diff	/^@@ -107,6 +107,12 @@$/;"	h	modifiedFile:a/dwm.c
 -1076,7 +1091,7	patches/dwm-attachabove-6.1.diff	/^@@ -1076,7 +1091,7 @@ manage(Window w, XWindowAttributes *wa)$/;"	h	modifiedFile:a/dwm.c
 -109,5 +122,6	patches/dwm-pertag-tab-6.1.diff	/^@@ -109,5 +122,6 @@$/;"	h	modifiedFile:a/config.h
--1105,6 +1217,12	other_patches/dwm-systray-6.1.diff	/^@@ -1105,6 +1217,12 @@$/;"	h	modifiedFile:a/dwm.c
 -111,25 +111,35	patches/dwm-pertag-tab-6.1.diff	/^@@ -111,25 +111,35 @@$/;"	h	modifiedFile:a/dwm.c
 -111,3 +111,10	patches/dwm-fsignal-6.1.diff	/^@@ -111,3 +111,10 @@$/;"	h	modifiedFile:a/config.h
 -1117,14 +1117,8	patches/dwm-staticmonoclesymbol-6.1.diff	/^@@ -1117,14 +1117,8 @@$/;"	h	modifiedFile:a/dwm.c
+-1138,15 +1235,31	other_patches/dwm-systray-6.1.diff	/^@@ -1138,15 +1235,31 @@$/;"	h	modifiedFile:a/dwm.c
 -1139,7 +1337,7	patches/dwm-pertag-tab-6.1.diff	/^@@ -1139,7 +1337,7 @@$/;"	h	modifiedFile:a/dwm.c
 -1157,8 +1157,6	patches/dwm-fakefullscreen-6.1.diff	/^@@ -1157,8 +1157,6 @@$/;"	h	modifiedFile:dwm.c
 -1163,7 +1361,7	patches/dwm-pertag-tab-6.1.diff	/^@@ -1163,7 +1361,7 @@$/;"	h	modifiedFile:a/dwm.c
 -119,6 +119,7	patches/dwm-ru-gaps-bottomstack-6.1.diff	/^@@ -119,6 +119,7 @@$/;"	h	modifiedFile:a/dwm.c
 -12,6 +12,7	patches/dwm-ru-gaps-bottomstack-6.1.diff	/^@@ -12,6 +12,7 @@$/;"	h	modifiedFile:a/config.h
 -122,6 +122,7	other_patches/dwm-alternativetags-6.1.diff	/^@@ -122,6 +122,7 @@$/;"	h	modifiedFile:a/dwm.c
--1232,6 +1350,16	other_patches/dwm-systray-6.1.diff	/^@@ -1232,6 +1350,16 @@$/;"	h	modifiedFile:a/dwm.c
 -1232,8 +1280,10	patches/dwm-fsignal-6.1.diff	/^@@ -1232,8 +1280,10 @@$/;"	h	modifiedFile:a/dwm.c
 -1250,12 +1448,14	patches/dwm-pertag-tab-6.1.diff	/^@@ -1250,12 +1448,14 @@$/;"	h	modifiedFile:a/dwm.c
 -1265,6 +1268,7	patches/dwm-restartsig-6.1.diff	/^@@ -1265,6 +1268,7 @@$/;"	h	modifiedFile:a/dwm.c
--1283,6 +1411,19	other_patches/dwm-systray-6.1.diff	/^@@ -1283,6 +1411,19 @@$/;"	h	modifiedFile:a/dwm.c
--1290,6 +1431,14	other_patches/dwm-systray-6.1.diff	/^@@ -1290,6 +1431,14 @@$/;"	h	modifiedFile:a/dwm.c
 -1299,6 +1304,13	patches/dwm-ru-gaps-bottomstack-6.1.diff	/^@@ -1299,6 +1304,13 @@$/;"	h	modifiedFile:a/dwm.c
--13,6 +13,10	other_patches/dwm-systray-6.1.diff	/^@@ -13,6 +13,10 @@$/;"	h	modifiedFile:a/config.h
 -1308,9 +1308,14	other_patches/dwm-resizecorners-6.1.diff	/^@@ -1308,9 +1308,14 @@$/;"	h	modifiedFile:a/dwm.c
 -1315,8 +1313,6	patches/dwm-fakefullscreen-6.1.diff	/^@@ -1315,8 +1313,6 @@$/;"	h	modifiedFile:dwm.c
 -1320,10 +1325,19	other_patches/dwm-resizecorners-6.1.diff	/^@@ -1320,10 +1325,19 @@$/;"	h	modifiedFile:a/dwm.c
 -1321,7 +1521,7	patches/dwm-pertag-tab-6.1.diff	/^@@ -1321,7 +1521,7 @@$/;"	h	modifiedFile:a/dwm.c
+-1322,7 +1435,7	other_patches/dwm-systray-6.1.diff	/^@@ -1322,7 +1435,7 @@$/;"	h	modifiedFile:a/dwm.c
 -1339,6 +1353,11	other_patches/dwm-resizecorners-6.1.diff	/^@@ -1339,6 +1353,11 @@$/;"	h	modifiedFile:a/dwm.c
 -1347,11 +1366,13	other_patches/dwm-resizecorners-6.1.diff	/^@@ -1347,11 +1366,13 @@$/;"	h	modifiedFile:a/dwm.c
 -136,6 +136,9	patches/dwm-restartsig-6.1.diff	/^@@ -136,6 +136,9 @@$/;"	h	modifiedFile:a/dwm.1
--1362,6 +1511,18	other_patches/dwm-systray-6.1.diff	/^@@ -1362,6 +1511,18 @@$/;"	h	modifiedFile:a/dwm.c
 -1369,6 +1569,7	patches/dwm-pertag-tab-6.1.diff	/^@@ -1369,6 +1569,7 @@$/;"	h	modifiedFile:a/dwm.c
 -137,6 +137,7	patches/dwm-center-6.1.diff	/^@@ -137,6 +137,7 @@ typedef struct {$/;"	h	modifiedFile:a/dwm.c
--141,6 +160,12	other_patches/dwm-systray-6.1.diff	/^@@ -141,6 +160,12 @@$/;"	h	modifiedFile:a/dwm.c
+-1432,7 +1545,12	other_patches/dwm-systray-6.1.diff	/^@@ -1432,7 +1545,12 @@$/;"	h	modifiedFile:a/dwm.c
 -1434,7 +1449,7	patches/dwm-attachabove-6.1.diff	/^@@ -1434,7 +1449,7 @@ sendmon(Client *c, Monitor *m)$/;"	h	modifiedFile:a/dwm.c
--1450,26 +1611,36	other_patches/dwm-systray-6.1.diff	/^@@ -1450,26 +1611,36 @@$/;"	h	modifiedFile:a/dwm.c
 -147,6 +147,7	patches/dwm-attachabove-6.1.diff	/^@@ -147,6 +147,7 @@ static int applysizehints(Client *c, int *x, int *y, int *w, int *h, int int/;"	h	modifiedFile:a/dwm.c
 -1477,11 +1678,11	patches/dwm-pertag-tab-6.1.diff	/^@@ -1477,11 +1678,11 @@$/;"	h	modifiedFile:a/dwm.c
--1483,7 +1654,7	other_patches/dwm-systray-6.1.diff	/^@@ -1483,7 +1654,7 @@$/;"	h	modifiedFile:a/dwm.c
 -149,6 +152,13	patches/dwm-restartsig-6.1.diff	/^@@ -149,6 +152,13 @@$/;"	h	modifiedFile:a/dwm.1
 -1493,24 +1489,10	patches/dwm-fakefullscreen-6.1.diff	/^@@ -1493,24 +1489,10 @@$/;"	h	modifiedFile:dwm.c
 -15,6 +15,7	patches/dwm-transparency-6.1.diff	/^@@ -15,6 +15,7 @@$/;"	h	modifiedFile:a/config.h
@@ -61,44 +55,45 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -1517,10 +1718,13	patches/dwm-pertag-tab-6.1.diff	/^@@ -1517,10 +1718,13 @@$/;"	h	modifiedFile:a/dwm.c
 -1539,7 +1743,7	patches/dwm-pertag-tab-6.1.diff	/^@@ -1539,7 +1743,7 @@$/;"	h	modifiedFile:a/dwm.c
 -1551,6 +1555,9	patches/dwm-restartsig-6.1.diff	/^@@ -1551,6 +1555,9 @@$/;"	h	modifiedFile:a/dwm.c
+-1551,6 +1669,17	other_patches/dwm-systray-6.1.diff	/^@@ -1551,6 +1669,17 @@$/;"	h	modifiedFile:a/dwm.c
 -1559,8 +1763,9	patches/dwm-pertag-tab-6.1.diff	/^@@ -1559,8 +1763,9 @@$/;"	h	modifiedFile:a/dwm.c
--1569,12 +1740,18	other_patches/dwm-systray-6.1.diff	/^@@ -1569,12 +1740,18 @@$/;"	h	modifiedFile:a/dwm.c
 -1572,6 +1587,7	patches/dwm-transparency-6.1.diff	/^@@ -1572,6 +1587,7 @@$/;"	h	modifiedFile:a/dwm.c
--1586,6 +1763,8	other_patches/dwm-systray-6.1.diff	/^@@ -1586,6 +1763,8 @@$/;"	h	modifiedFile:a/dwm.c
+-1606,6 +1735,39	other_patches/dwm-systray-6.1.diff	/^@@ -1606,6 +1735,39 @@$/;"	h	modifiedFile:a/dwm.c
 -1611,7 +1593,7	patches/dwm-fakefullscreen-6.1.diff	/^@@ -1611,7 +1593,7 @@$/;"	h	modifiedFile:dwm.c
 -1630,6 +1637,20	patches/dwm-restartsig-6.1.diff	/^@@ -1630,6 +1637,20 @@$/;"	h	modifiedFile:a/dwm.c
 -1632,10 +1837,10	patches/dwm-pertag-tab-6.1.diff	/^@@ -1632,10 +1837,10 @@$/;"	h	modifiedFile:a/dwm.c
 -164,12 +174,15	patches/dwm-pertag-tab-6.1.diff	/^@@ -164,12 +174,15 @@$/;"	h	modifiedFile:a/dwm.c
--1645,6 +1824,22	other_patches/dwm-systray-6.1.diff	/^@@ -1645,6 +1824,22 @@$/;"	h	modifiedFile:a/dwm.c
 -166,6 +167,7	patches/dwm-transparency-6.1.diff	/^@@ -166,6 +167,7 @@$/;"	h	modifiedFile:a/dwm.c
 -1672,20 +1694,25	patches/dwm-ru-gaps-bottomstack-6.1.diff	/^@@ -1672,20 +1694,25 @@$/;"	h	modifiedFile:a/dwm.c
 -1690,6 +1692,13	other_patches/dwm-alternativetags-6.1.diff	/^@@ -1690,6 +1692,13 @@$/;"	h	modifiedFile:a/dwm.c
 -1692,13 +1897,24	patches/dwm-pertag-tab-6.1.diff	/^@@ -1692,13 +1897,24 @@$/;"	h	modifiedFile:a/dwm.c
--1694,7 +1889,18	other_patches/dwm-systray-6.1.diff	/^@@ -1694,7 +1889,18 @@$/;"	h	modifiedFile:a/dwm.c
--170,8 +195,10	other_patches/dwm-systray-6.1.diff	/^@@ -170,8 +195,10 @@$/;"	h	modifiedFile:a/dwm.c
 -1703,8 +1685,6	patches/dwm-fakefullscreen-6.1.diff	/^@@ -1703,8 +1685,6 @@$/;"	h	modifiedFile:dwm.c
 -1731,9 +1947,29	patches/dwm-pertag-tab-6.1.diff	/^@@ -1731,9 +1947,29 @@$/;"	h	modifiedFile:a/dwm.c
 -1744,7 +1980,7	patches/dwm-pertag-tab-6.1.diff	/^@@ -1744,7 +1980,7 @@$/;"	h	modifiedFile:a/dwm.c
+-176,6 +195,12	other_patches/dwm-systray-6.1.diff	/^@@ -176,6 +195,12 @@$/;"	h	modifiedFile:a/dwm.c
 -177,6 +183,7	patches/dwm-fsignal-6.1.diff	/^@@ -177,6 +183,7 @@$/;"	h	modifiedFile:a/dwm.c
 -178,6 +194,7	patches/dwm-xrdb-6.1.diff	/^@@ -178,6 +194,7 @@$/;"	h	modifiedFile:a/dwm.c
--1790,11 +1996,17	other_patches/dwm-systray-6.1.diff	/^@@ -1790,11 +1996,17 @@$/;"	h	modifiedFile:a/dwm.c
+-1780,28 +1942,38	other_patches/dwm-systray-6.1.diff	/^@@ -1780,28 +1942,38 @@$/;"	h	modifiedFile:a/dwm.c
 -18,6 +18,7	other_patches/dwm-alternativetags-6.1.diff	/^@@ -18,6 +18,7 @@$/;"	h	modifiedFile:a/config.h
--1804,10 +2016,15	other_patches/dwm-systray-6.1.diff	/^@@ -1804,10 +2016,15 @@$/;"	h	modifiedFile:a/dwm.c
 -1809,20 +2045,44	patches/dwm-pertag-tab-6.1.diff	/^@@ -1809,20 +2045,44 @@$/;"	h	modifiedFile:a/dwm.c
--189,13 +216,16	other_patches/dwm-systray-6.1.diff	/^@@ -189,13 +216,16 @@$/;"	h	modifiedFile:a/dwm.c
+-1813,7 +1985,7	other_patches/dwm-systray-6.1.diff	/^@@ -1813,7 +1985,7 @@$/;"	h	modifiedFile:a/dwm.c
 -1891,7 +1906,7	patches/dwm-attachabove-6.1.diff	/^@@ -1891,7 +1906,7 @@ updategeom(void)$/;"	h	modifiedFile:a/dwm.c
 -19,14 +19,22	patches/dwm-pertag-tab-6.1.diff	/^@@ -19,14 +19,22 @@$/;"	h	modifiedFile:a/dwm.1
 -19,6 +19,18	patches/dwm-pertag-tab-6.1.diff	/^@@ -19,6 +19,18 @@$/;"	h	modifiedFile:a/config.h
--1998,6 +2215,117	other_patches/dwm-systray-6.1.diff	/^@@ -1998,6 +2215,117 @@$/;"	h	modifiedFile:a/dwm.c
+-1902,6 +2074,9	other_patches/dwm-systray-6.1.diff	/^@@ -1902,6 +2074,9 @@$/;"	h	modifiedFile:a/dwm.c
+-1909,6 +2084,9	other_patches/dwm-systray-6.1.diff	/^@@ -1909,6 +2084,9 @@$/;"	h	modifiedFile:a/dwm.c
+-1920,6 +2098,8	other_patches/dwm-systray-6.1.diff	/^@@ -1920,6 +2098,8 @@$/;"	h	modifiedFile:a/dwm.c
+-1993,6 +2173,23	other_patches/dwm-systray-6.1.diff	/^@@ -1993,6 +2173,23 @@$/;"	h	modifiedFile:a/dwm.c
 -200,6 +201,7	patches/dwm-ru-gaps-bottomstack-6.1.diff	/^@@ -200,6 +201,7 @@$/;"	h	modifiedFile:a/dwm.c
 -2004,9 +2264,9	patches/dwm-pertag-tab-6.1.diff	/^@@ -2004,9 +2264,9 @@$/;"	h	modifiedFile:a/dwm.c
 -2031,11 +2291,33	patches/dwm-pertag-tab-6.1.diff	/^@@ -2031,11 +2291,33 @@$/;"	h	modifiedFile:a/dwm.c
+-2047,7 +2244,18	other_patches/dwm-systray-6.1.diff	/^@@ -2047,7 +2244,18 @@$/;"	h	modifiedFile:a/dwm.c
 -205,6 +205,8	patches/dwm-restartsig-6.1.diff	/^@@ -205,6 +205,8 @@$/;"	h	modifiedFile:a/dwm.c
 -206,6 +219,7	patches/dwm-pertag-tab-6.1.diff	/^@@ -206,6 +219,7 @@$/;"	h	modifiedFile:a/dwm.c
--206,6 +236,7	other_patches/dwm-systray-6.1.diff	/^@@ -206,6 +236,7 @@$/;"	h	modifiedFile:a/dwm.c
 -2063,7 +2345,7	patches/dwm-pertag-tab-6.1.diff	/^@@ -2063,7 +2345,7 @@$/;"	h	modifiedFile:a/dwm.c
--2070,6 +2398,16	other_patches/dwm-systray-6.1.diff	/^@@ -2070,6 +2398,16 @@$/;"	h	modifiedFile:a/dwm.c
 -209,6 +211,8	patches/dwm-ru-gaps-bottomstack-6.1.diff	/^@@ -209,6 +211,8 @@$/;"	h	modifiedFile:a/dwm.c
+-209,9 +234,11	other_patches/dwm-systray-6.1.diff	/^@@ -209,9 +234,11 @@$/;"	h	modifiedFile:a/dwm.c
+-21,9 +21,22	other_patches/dwm-systray-6.1.diff	/^@@ -21,9 +21,22 @@$/;"	h	modifiedFile:a/config.h
 -2107,6 +2142,22	patches/dwm-xrdb-6.1.diff	/^@@ -2107,6 +2142,22 @@$/;"	h	modifiedFile:a/dwm.c
 -2110,14 +2111,38	patches/dwm-zoomswap-6.1.diff	/^@@ -2110,14 +2111,38 @@$/;"	h	modifiedFile:a/dwm.c
 -213,6 +214,7	other_patches/dwm-alternativetags-6.1.diff	/^@@ -213,6 +214,7 @@$/;"	h	modifiedFile:a/dwm.c
@@ -106,64 +101,68 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -2135,6 +2156,7	patches/dwm-restartsig-6.1.diff	/^@@ -2135,6 +2156,7 @@$/;"	h	modifiedFile:a/dwm.c
 -2139,3 +2141,65	other_patches/dwm-bottomstack-6.1.diff	/^@@ -2139,3 +2141,65 @@ main(int argc, char *argv[])$/;"	h	modifiedFile:a/dwm.c
 -2139,3 +2166,67	patches/dwm-ru-gaps-bottomstack-6.1.diff	/^@@ -2139,3 +2166,67 @@$/;"	h	modifiedFile:a/dwm.c
--223,18 +254,24	other_patches/dwm-systray-6.1.diff	/^@@ -223,18 +254,24 @@$/;"	h	modifiedFile:a/dwm.c
+-2172,11 +2380,17	other_patches/dwm-systray-6.1.diff	/^@@ -2172,11 +2380,17 @@$/;"	h	modifiedFile:a/dwm.c
+-2186,10 +2400,15	other_patches/dwm-systray-6.1.diff	/^@@ -2186,10 +2400,15 @@$/;"	h	modifiedFile:a/dwm.c
+-2245,6 +2464,128	other_patches/dwm-systray-6.1.diff	/^@@ -2245,6 +2464,128 @@$/;"	h	modifiedFile:a/dwm.c
+-231,13 +258,16	other_patches/dwm-systray-6.1.diff	/^@@ -231,13 +258,16 @@$/;"	h	modifiedFile:a/dwm.c
 -232,6 +249,7	patches/dwm-xrdb-6.1.diff	/^@@ -232,6 +249,7 @@$/;"	h	modifiedFile:a/dwm.c
 -233,6 +233,8	other_patches/dwm-bottomstack-6.1.diff	/^@@ -233,6 +233,8 @@ static int xerror(Display *dpy, XErrorEvent *ee);$/;"	h	modifiedFile:a/dwm.c
 -235,6 +235,7	patches/dwm-zoomswap-6.1.diff	/^@@ -235,6 +235,7 @@$/;"	h	modifiedFile:a/dwm.c
 -24,9 +24,9	patches/dwm-center-6.1.diff	/^@@ -24,9 +24,9 @@ static const Rule rules[] = {$/;"	h	modifiedFile:a/config.h
 -240,6 +254,7	patches/dwm-pertag-tab-6.1.diff	/^@@ -240,6 +254,7 @@$/;"	h	modifiedFile:a/dwm.c
--256,9 +293,10	other_patches/dwm-systray-6.1.diff	/^@@ -256,9 +293,10 @@$/;"	h	modifiedFile:a/dwm.c
+-251,6 +281,7	other_patches/dwm-systray-6.1.diff	/^@@ -251,6 +281,7 @@$/;"	h	modifiedFile:a/dwm.c
 -259,6 +261,7	patches/dwm-restartsig-6.1.diff	/^@@ -259,6 +261,7 @@$/;"	h	modifiedFile:a/dwm.c
 -270,6 +285,16	patches/dwm-pertag-tab-6.1.diff	/^@@ -270,6 +285,16 @@$/;"	h	modifiedFile:a/dwm.c
+-271,12 +302,16	other_patches/dwm-systray-6.1.diff	/^@@ -271,12 +302,16 @@$/;"	h	modifiedFile:a/dwm.c
+-284,6 +319,8	other_patches/dwm-systray-6.1.diff	/^@@ -284,6 +319,8 @@$/;"	h	modifiedFile:a/dwm.c
 -296,6 +297,7	patches/dwm-center-6.1.diff	/^@@ -296,6 +297,7 @@ applyrules(Client *c)$/;"	h	modifiedFile:a/dwm.c
+-307,9 +344,10	other_patches/dwm-systray-6.1.diff	/^@@ -307,9 +344,10 @@$/;"	h	modifiedFile:a/dwm.c
 -35,6 +35,7	patches/dwm-xrdb-6.1.diff	/^@@ -35,6 +35,7 @@$/;"	h	modifiedFile:a/dwm.c
 -39,6 +39,8	other_patches/dwm-bottomstack-6.1.diff	/^@@ -39,6 +39,8 @@ static const Layout layouts[] = {$/;"	h	modifiedFile:a/config.h
 -39,6 +40,8	patches/dwm-ru-gaps-bottomstack-6.1.diff	/^@@ -39,6 +40,8 @@$/;"	h	modifiedFile:a/config.h
 -393,6 +418,8	patches/dwm-pertag-tab-6.1.diff	/^@@ -393,6 +418,8 @@$/;"	h	modifiedFile:a/dwm.c
 -406,6 +407,20	patches/dwm-attachabove-6.1.diff	/^@@ -406,6 +407,20 @@ attach(Client *c)$/;"	h	modifiedFile:a/dwm.c
 -43,7 +51,8	patches/dwm-pertag-tab-6.1.diff	/^@@ -43,7 +51,8 @@$/;"	h	modifiedFile:a/dwm.1
--438,7 +476,7	other_patches/dwm-systray-6.1.diff	/^@@ -438,7 +476,7 @@$/;"	h	modifiedFile:a/dwm.c
 -442,14 +469,33	patches/dwm-pertag-tab-6.1.diff	/^@@ -442,14 +469,33 @@$/;"	h	modifiedFile:a/dwm.c
 -469,23 +515,24	patches/dwm-pertag-tab-6.1.diff	/^@@ -469,23 +515,24 @@$/;"	h	modifiedFile:a/dwm.c
--479,6 +517,11	other_patches/dwm-systray-6.1.diff	/^@@ -479,6 +517,11 @@$/;"	h	modifiedFile:a/dwm.c
 -505,6 +552,8	patches/dwm-pertag-tab-6.1.diff	/^@@ -505,6 +552,8 @@$/;"	h	modifiedFile:a/dwm.c
--524,9 +567,50	other_patches/dwm-systray-6.1.diff	/^@@ -524,9 +567,50 @@$/;"	h	modifiedFile:a/dwm.c
+-517,7 +555,7	other_patches/dwm-systray-6.1.diff	/^@@ -517,7 +555,7 @@$/;"	h	modifiedFile:a/dwm.c
 -526,6 +575,7	patches/dwm-pertag-tab-6.1.diff	/^@@ -526,6 +575,7 @@$/;"	h	modifiedFile:a/dwm.c
 -532,7 +532,7	patches/dwm-fakefullscreen-6.1.diff	/^@@ -532,7 +532,7 @@$/;"	h	modifiedFile:dwm.c
 -537,6 +587,8	patches/dwm-pertag-tab-6.1.diff	/^@@ -537,6 +587,8 @@$/;"	h	modifiedFile:a/dwm.c
 -56,6 +57,21	patches/dwm-xrdb-6.1.diff	/^@@ -56,6 +57,21 @@$/;"	h	modifiedFile:a/dwm.c
--564,7 +648,7	other_patches/dwm-systray-6.1.diff	/^@@ -564,7 +648,7 @@$/;"	h	modifiedFile:a/dwm.c
 -565,6 +617,7	patches/dwm-pertag-tab-6.1.diff	/^@@ -565,6 +617,7 @@$/;"	h	modifiedFile:a/dwm.c
--57,12 +57,31	other_patches/dwm-systray-6.1.diff	/^@@ -57,12 +57,31 @@$/;"	h	modifiedFile:a/dwm.c
+-57,6 +57,23	other_patches/dwm-systray-6.1.diff	/^@@ -57,6 +57,23 @@$/;"	h	modifiedFile:a/dwm.c
+-576,6 +614,11	other_patches/dwm-systray-6.1.diff	/^@@ -576,6 +614,11 @@$/;"	h	modifiedFile:a/dwm.c
 -576,8 +629,14	patches/dwm-pertag-tab-6.1.diff	/^@@ -576,8 +629,14 @@$/;"	h	modifiedFile:a/dwm.c
--576,8 +660,7	other_patches/dwm-systray-6.1.diff	/^@@ -576,8 +660,7 @@$/;"	h	modifiedFile:a/dwm.c
 -59,6 +60,7	patches/dwm-xrdb-6.1.diff	/^@@ -59,6 +60,7 @@$/;"	h	modifiedFile:a/config.h
 -61,6 +62,9	patches/dwm-transparency-6.1.diff	/^@@ -61,6 +62,9 @@$/;"	h	modifiedFile:a/config.h
 -62,6 +62,7	patches/dwm-transparency-6.1.diff	/^@@ -62,6 +62,7 @@$/;"	h	modifiedFile:a/dwm.c
 -62,6 +74,7	patches/dwm-pertag-tab-6.1.diff	/^@@ -62,6 +74,7 @@$/;"	h	modifiedFile:a/config.h
+-625,8 +668,50	other_patches/dwm-systray-6.1.diff	/^@@ -625,8 +668,50 @@$/;"	h	modifiedFile:a/dwm.c
 -64,7 +64,7	patches/dwm-pertag-tab-6.1.diff	/^@@ -64,7 +64,7 @@$/;"	h	modifiedFile:a/dwm.c
 -640,16 +699,41	patches/dwm-pertag-tab-6.1.diff	/^@@ -640,16 +699,41 @@$/;"	h	modifiedFile:a/dwm.c
 -643,6 +647,7	patches/dwm-ru-gaps-bottomstack-6.1.diff	/^@@ -643,6 +647,7 @@$/;"	h	modifiedFile:a/dwm.c
--661,6 +744,11	other_patches/dwm-systray-6.1.diff	/^@@ -661,6 +744,11 @@$/;"	h	modifiedFile:a/dwm.c
--710,6 +798,7	other_patches/dwm-systray-6.1.diff	/^@@ -710,6 +798,7 @@$/;"	h	modifiedFile:a/dwm.c
+-668,8 +753,7	other_patches/dwm-systray-6.1.diff	/^@@ -668,8 +753,7 @@$/;"	h	modifiedFile:a/dwm.c
+-683,12 +767,13	other_patches/dwm-systray-6.1.diff	/^@@ -683,12 +767,13 @@$/;"	h	modifiedFile:a/dwm.c
 -719,7 +721,7	other_patches/dwm-alternativetags-6.1.diff	/^@@ -719,7 +721,7 @@$/;"	h	modifiedFile:a/dwm.c
 -720,7 +720,7	patches/dwm-activetagindicatorbar-6.1.diff	/^@@ -720,7 +720,7 @@ drawbar(Monitor *m)$/;"	h	modifiedFile:dwm-a/dwm.c
--732,6 +821,9	other_patches/dwm-systray-6.1.diff	/^@@ -732,6 +821,9 @@$/;"	h	modifiedFile:a/dwm.c
 -74,6 +76,8	other_patches/dwm-bottomstack-6.1.diff	/^@@ -74,6 +76,8 @@ static Key keys[] = {$/;"	h	modifiedFile:a/config.h
 -74,6 +77,8	patches/dwm-ru-gaps-bottomstack-6.1.diff	/^@@ -74,6 +77,8 @@$/;"	h	modifiedFile:a/config.h
 -76,6 +77,7	other_patches/dwm-alternativetags-6.1.diff	/^@@ -76,6 +77,7 @@$/;"	h	modifiedFile:a/config.h
--760,6 +852,7	other_patches/dwm-systray-6.1.diff	/^@@ -760,6 +852,7 @@$/;"	h	modifiedFile:a/dwm.c
 -763,6 +847,104	patches/dwm-pertag-tab-6.1.diff	/^@@ -763,6 +847,104 @@$/;"	h	modifiedFile:a/dwm.c
--787,8 +880,11	other_patches/dwm-systray-6.1.diff	/^@@ -787,8 +880,11 @@$/;"	h	modifiedFile:a/dwm.c
+-78,8 +95,10	other_patches/dwm-systray-6.1.diff	/^@@ -78,8 +95,10 @@$/;"	h	modifiedFile:a/dwm.c
 -787,8 +969,10	patches/dwm-pertag-tab-6.1.diff	/^@@ -787,8 +969,10 @@$/;"	h	modifiedFile:a/dwm.c
 -792,6 +794,18	patches/dwm-transparency-6.1.diff	/^@@ -792,6 +794,18 @@$/;"	h	modifiedFile:a/dwm.c
+-798,6 +883,11	other_patches/dwm-systray-6.1.diff	/^@@ -798,6 +883,11 @@$/;"	h	modifiedFile:a/dwm.c
 -806,7 +990,7	patches/dwm-pertag-tab-6.1.diff	/^@@ -806,7 +990,7 @@$/;"	h	modifiedFile:a/dwm.c
 -815,6 +999,7	patches/dwm-pertag-tab-6.1.diff	/^@@ -815,6 +999,7 @@$/;"	h	modifiedFile:a/dwm.c
 -82,6 +87,9	patches/dwm-ru-gaps-bottomstack-6.1.diff	/^@@ -82,6 +87,9 @@$/;"	h	modifiedFile:a/config.h
+-847,6 +937,7	other_patches/dwm-systray-6.1.diff	/^@@ -847,6 +937,7 @@$/;"	h	modifiedFile:a/dwm.c
 -868,6 +1053,19	patches/dwm-pertag-tab-6.1.diff	/^@@ -868,6 +1053,19 @@$/;"	h	modifiedFile:a/dwm.c
--875,10 +971,17	other_patches/dwm-systray-6.1.diff	/^@@ -875,10 +971,17 @@$/;"	h	modifiedFile:a/dwm.c
+-869,6 +960,9	other_patches/dwm-systray-6.1.diff	/^@@ -869,6 +960,9 @@$/;"	h	modifiedFile:a/dwm.c
+-897,6 +991,7	other_patches/dwm-systray-6.1.diff	/^@@ -897,6 +991,7 @@$/;"	h	modifiedFile:a/dwm.c
 -91,6 +91,7	patches/dwm-restartsig-6.1.diff	/^@@ -91,6 +91,7 @@$/;"	h	modifiedFile:a/config.h
--912,6 +1015,15	other_patches/dwm-systray-6.1.diff	/^@@ -912,6 +1015,15 @@$/;"	h	modifiedFile:a/dwm.c
 -92,6 +93,8	patches/dwm-push-6.1.diff	/^@@ -92,6 +93,8 @@$/;"	h	modifiedFile:a/config.h
 -92,7 +92,7	patches/dwm-center-6.1.diff	/^@@ -92,7 +92,7 @@ struct Client {$/;"	h	modifiedFile:a/dwm.c
 -981,7 +1179,7	patches/dwm-pertag-tab-6.1.diff	/^@@ -981,7 +1179,7 @@$/;"	h	modifiedFile:a/dwm.c
@@ -285,7 +284,7 @@ __anon0f53a99e0a08	dwm.c	/^typedef struct {$/;"	s	file:
 __anon0f53a99e0b08	dwm.c	/^typedef struct {$/;"	s	file:
 a/config.h	other_patches/dwm-alternativetags-6.1.diff	/^--- a\/config.h	2019-06-22 17:12:40.589933776 +0100$/;"	m
 a/config.h	other_patches/dwm-bottomstack-6.1.diff	/^--- a\/config.h$/;"	m
-a/config.h	other_patches/dwm-systray-6.1.diff	/^--- a\/config.h	2019-06-22 17:12:40.589933776 +0100$/;"	m
+a/config.h	other_patches/dwm-systray-6.1.diff	/^--- a\/config.h	2019-07-01 20:05:18.364484432 +0100$/;"	m
 a/config.h	patches/dwm-center-6.1.diff	/^--- a\/config.h$/;"	m
 a/config.h	patches/dwm-fsignal-6.1.diff	/^--- a\/config.h	2019-06-19 10:58:23.447186220 +0100$/;"	m
 a/config.h	patches/dwm-pertag-tab-6.1.diff	/^--- a\/config.h	2015-11-08 22:39:37.000000000 +0000$/;"	m
@@ -300,7 +299,7 @@ a/dwm.1	patches/dwm-restartsig-6.1.diff	/^--- a\/dwm.1	2019-06-22 17:12:40.58993
 a/dwm.c	other_patches/dwm-alternativetags-6.1.diff	/^--- a\/dwm.c	2019-06-22 17:12:40.599933776 +0100$/;"	m
 a/dwm.c	other_patches/dwm-bottomstack-6.1.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	other_patches/dwm-resizecorners-6.1.diff	/^--- a\/dwm.c	2015-11-08 22:39:37.000000000 +0000$/;"	m
-a/dwm.c	other_patches/dwm-systray-6.1.diff	/^--- a\/dwm.c	2019-06-22 17:12:40.599933776 +0100$/;"	m
+a/dwm.c	other_patches/dwm-systray-6.1.diff	/^--- a\/dwm.c	2019-07-01 20:05:18.364484432 +0100$/;"	m
 a/dwm.c	patches/dwm-attachabove-6.1.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	patches/dwm-center-6.1.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	patches/dwm-fsignal-6.1.diff	/^--- a\/dwm.c	2015-11-08 22:39:37.000000000 +0000$/;"	m

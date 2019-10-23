@@ -53,13 +53,20 @@ static const Rule rules[] = {
     {"Firefox", NULL, NULL, 0, 1, 0, -1},
     {"whatsdesk", NULL, "WhatsDesk", 1 << 8, 1, 0, -1},
     {"Skype", NULL, NULL, 1 << 8, 1, 0, -1},
+    {"java-lang-Thread", "sun-awt-X11-XFramePeer",
+     "Starting Apache NetBeans IDE", 1 << 4, 1, 0, -1},
+    {"Apache NetBeans 11.1", "sun-awt-X11-XFramePeer", "Apache NetBeans 11.1",
+     1 << 4, 1, 0, -1},
     {"Gnome-calculator", NULL, NULL, 0, 1, 1, -1},
+    {"Sxiv", "sxiv", "sxiv", 0, 1, 1, -1},
+    {"File-roller", "file-roller", NULL, 0, 1, 1, -1},
     {"Nemo", "nemo", NULL, 0, 1, 1, -1},
     {"URxvt", "urxvt", NULL, 0, 1, 0, -1},
     {"kitty", "kitty", NULL, 0, 1, 0, -1},
     {"st-256color", "st-256color", "st", 0, 1, 0, -1},
     {"Gvim", "gvim", NULL, 0, 1, 1, -1},
     {"Zathura", "zathura", NULL, 0, 1, 1, -1},
+    {"Peek", "peek", "Peek", 0, 1, 1, -1},
     {"Xfce4-appfinder", "xfce4-appfinder", NULL, 0, 1, 1, -1}};
 
 /* layout(s) */
