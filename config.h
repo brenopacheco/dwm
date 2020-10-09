@@ -1,6 +1,4 @@
 /* See LICENSE file for copyright and license details. */
-#include "push.c"
-#include "zoomswap.c"
 #include <X11/XF86keysym.h>
 
 /* appearance */
@@ -66,10 +64,10 @@ static const Rule rules[] = {
     {"kitty", "kitty", NULL, 0, 1, 0, -1},
     {"st-256color", "st-256color", "st", 0, 1, 0, -1},
     {"Gvim", "gvim", NULL, 0, 1, 1, -1},
-    {"Zathura", "zathura", NULL, 0, 1, 1, -1},
     {"Peek", "peek", "Peek", 0, 1, 1, -1},
     {"Xfce4-appfinder", "xfce4-appfinder", NULL, 0, 1, 1, -1}};
 
+    /* {"Zathura", "zathura", NULL, 0, 1, 1, -1}, */
 
 /* layout(s) */
 static const float mfact = 0.50; /* factor of master area size [0.05..0.95] */
