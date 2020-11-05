@@ -8,8 +8,7 @@ static const char *fonts[] = {
     "JetBrainsMono Nerd Font:size=11",
     // "UbuntuMono Nerd Font:size=12",
 };
-// static const char dmenufont[] = "JetBrainsMono Nerd Font:size=12";
-static const char dmenufont[] = "ubuntumono:size=12";
+static const char dmenufont[] = "ubuntumono:size=11";
 static char normbordercolor[] = "#444444";
 static char normbgcolor[] = "#222222";
 static char normfgcolor[] = "#bbbbbb";
