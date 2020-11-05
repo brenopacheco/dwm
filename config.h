@@ -5,8 +5,10 @@
 static const char *xres = "/home/breno/.Xresources";
 /* using nerdfonts for icons */
 static const char *fonts[] = {
-    "UbuntuMono Nerd Font:size=12",
+    "JetBrainsMono Nerd Font:size=11",
+    // "UbuntuMono Nerd Font:size=12",
 };
+// static const char dmenufont[] = "JetBrainsMono Nerd Font:size=12";
 static const char dmenufont[] = "ubuntumono:size=12";
 static char normbordercolor[] = "#444444";
 static char normbgcolor[] = "#222222";
