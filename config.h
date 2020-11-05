@@ -19,7 +19,7 @@ static const unsigned int gappx = 10;   /* gaps between windows */
 static const unsigned int snap = 32;    /* snap pixel */
 static const int showbar = 1;           /* 0 means no bar */
 static const int topbar = 1;            /* 0 means bottom bar */
-static const double defaultopacity = 0.9;
+static const double defaultopacity = 1; // old .9
 
 /* tagging */
 static const char *tags[] = {"", "", "", "", "", "", "漣", "", ""};
@@ -70,10 +70,9 @@ static const Rule rules[] = {
     /* {"Zathura", "zathura", NULL, 0, 1, 1, -1}, */
 
 /* layout(s) */
-static const float mfact = 0.50; /* factor of master area size [0.05..0.95] */
+static const float mfact = 0.60; /* factor of master area size [0.05..0.95] */
 static const int nmaster = 1;    /* number of clients in master area */
-static const int resizehints =
-    0; /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0; /* 1 means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
     /* symbol     arrange function */
@@ -116,7 +115,7 @@ static Key keys[] = {
 					 {MODKEY, XK_z, spawn, {.v = dpdf}},
 					 {MODKEY | ShiftMask, XK_s, spawn, SHCMD("transset-df -a --dec .05")},
 					 {MODKEY | ShiftMask, XK_d, spawn, SHCMD("transset-df -a --inc .05")},
-					 {MODKEY | ShiftMask, XK_f, spawn, SHCMD("transset-df -a .85")},
+					 {MODKEY | ShiftMask, XK_f, spawn, SHCMD("transset-df -a 1")},
 					 {MODKEY, XK_b, togglebar, {0}},
 					 {MODKEY, XK_e, spawn, {.v = emacscmd}},
 					 {MODKEY, XK_v, tabmode, {-1}},
