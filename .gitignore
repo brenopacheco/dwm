@@ -78,3 +78,5 @@ dwm
 tags
 
 .clangd
+
+.ccls-cache

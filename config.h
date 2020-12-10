@@ -101,6 +101,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = {"dmenu_dwm", "-m", dmenumon, NULL};
 static const char *termcmd[] = {"kitty", NULL};
 static const char *browsercmd[] = {"browse", NULL};
+static const char *passmenu[] = {"dmenu_pass", NULL};
 static const char *emacscmd[] = {"emacsclient", "-c", NULL};
 static const char *appfinder[] = {"xfce4-appfinder", NULL};
 static const char *dpdf[] = {"dpdf", NULL};
@@ -112,6 +113,7 @@ static Key keys[] = {
 					 {MODKEY, XK_d, spawn, {.v = dmenucmd}},
 					 {MODKEY, XK_apostrophe, spawn, {.v = appfinder}},
 					 {MODKEY, XK_w, spawn, {.v = browsercmd}},
+					 {MODKEY, XK_s, spawn, {.v = passmenu}},
 					 {MODKEY, XK_Return, spawn, {.v = termcmd}},
 					 {MODKEY, XK_z, spawn, {.v = dpdf}},
 					 {MODKEY | ShiftMask, XK_s, spawn, SHCMD("transset-df -a --dec .05")},
