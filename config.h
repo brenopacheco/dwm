@@ -62,7 +62,7 @@ static const Rule rules[] = {
     {"Nemo", "nemo", NULL, 0, 1, 1, -1},
     {"URxvt", "urxvt", NULL, 0, 1, 0, -1},
     {"Emacs", "emacs", NULL, 0, 1, 0, -1},
-    {"kitty", "kitty", NULL, 0, 1, 0, -1},
+    {"st", "st", NULL, 0, 1, 0, -1},
     {"st-256color", "st-256color", "st", 0, 1, 0, -1},
     {"Gvim", "gvim", NULL, 0, 1, 1, -1},
     {"Peek", "peek", "Peek", 0, 1, 1, -1},
@@ -99,12 +99,10 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = {"dmenu_dwm", "-m", dmenumon, NULL};
-static const char *termcmd[] = {"kitty", NULL};
+static const char *termcmd[] = {"st", NULL};
 static const char *browsercmd[] = {"browse", NULL};
 static const char *passmenu[] = {"dmenu_pass", NULL};
-static const char *emacscmd[] = {"emacsclient", "-c", NULL};
 static const char *appfinder[] = {"xfce4-appfinder", NULL};
-static const char *dpdf[] = {"dpdf", NULL};
 
 static Key keys[] = {
 					 /* modifier,                       key,                      function,
@@ -115,12 +113,7 @@ static Key keys[] = {
 					 {MODKEY, XK_w, spawn, {.v = browsercmd}},
 					 {MODKEY, XK_s, spawn, {.v = passmenu}},
 					 {MODKEY, XK_Return, spawn, {.v = termcmd}},
-					 {MODKEY, XK_z, spawn, {.v = dpdf}},
-					 {MODKEY | ShiftMask, XK_s, spawn, SHCMD("transset-df -a --dec .05")},
-					 {MODKEY | ShiftMask, XK_d, spawn, SHCMD("transset-df -a --inc .05")},
-					 {MODKEY | ShiftMask, XK_f, spawn, SHCMD("transset-df -a 1")},
 					 {MODKEY, XK_b, togglebar, {0}},
-					 {MODKEY, XK_e, spawn, {.v = emacscmd}},
 					 {MODKEY, XK_v, tabmode, {-1}},
 					 {MODKEY, XK_j, focusstack, {.i = +1}},
 					 {MODKEY, XK_k, focusstack, {.i = -1}},
