@@ -258,6 +258,7 @@ static void spawn(const Arg *arg);
 static void tabmode(const Arg *arg);
 static void tag(const Arg *arg);
 static void tagmon(const Arg *arg);
+static void tagandfocus(const Arg *arg);
 static void tile(Monitor *);
 static void bstack(Monitor *);
 static void bstackhoriz(Monitor *);
@@ -2016,6 +2017,14 @@ tagmon(const Arg *arg)
 }
 
 void
+tagandfocus(const Arg *arg)
+{
+    tagmon(arg);
+    focusmon(arg);
+    /* not working when sending from monitor to laptop */
+}
+
+void
 tile(Monitor *m)
 {
 	unsigned int i, n, h, mw, my, ty;
@@ -2208,7 +2217,7 @@ updatebarpos(Monitor *m)
 {
 	Client *c;
 	int nvis = 0;
-	
+
 	m->wy = m->my;
 	m->wh = m->mh;
 	if (m->showbar) {
