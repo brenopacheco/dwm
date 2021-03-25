@@ -49,36 +49,22 @@ static int def_layouts[1 + LENGTH(tags)] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
  */
 /*class, instance, title, tagsmask, iscentered, isfloating, monitor */
 static const Rule rules[] = {
-    {"Firefox", NULL, NULL, 0, 1, 0, -1},
-    {"whatsdesk", NULL, "WhatsDesk", 1 << 8, 1, 0, -1},
-    {"Skype", NULL, NULL, 1 << 8, 1, 0, -1},
-    {"java-lang-Thread", "sun-awt-X11-XFramePeer",
-     "Starting Apache NetBeans IDE", 1 << 4, 1, 0, -1},
-    {"Apache NetBeans 11.1", "sun-awt-X11-XFramePeer", "Apache NetBeans 11.1",
-     1 << 4, 1, 0, -1},
-    {"Gnome-calculator", NULL, NULL, 0, 1, 1, -1},
-    {"Sxiv", "sxiv", "sxiv", 0, 1, 1, -1},
-    {"File-roller", "file-roller", NULL, 0, 1, 1, -1},
-    {"Nemo", "nemo", NULL, 0, 1, 1, -1},
-    {"URxvt", "urxvt", NULL, 0, 1, 0, -1},
-    {"Emacs", "emacs", NULL, 0, 1, 0, -1},
-    {"st", "st", NULL, 0, 1, 0, -1},
-    {"st-256color", "st-256color", "st", 0, 1, 0, -1},
-    {"Gvim", "gvim", NULL, 0, 1, 1, -1},
-    {"Peek", "peek", "Peek", 0, 1, 1, -1},
-    {"Xfce4-appfinder", "xfce4-appfinder", NULL, 0, 1, 1, -1}};
-
-    /* {"Zathura", "zathura", NULL, 0, 1, 1, -1}, */
+    /* {"Gnome-calculator", NULL,          NULL,   0, 1, 1, -1}, */
+    {"Sxiv",                "sxiv",        "sxiv", 0, 1, 1, -1},
+    {"File-roller",         "file-roller", NULL,   0, 1, 1, -1},
+    {"Thunar",              "thunar",      NULL,   0, 1, 1, -1},
+    {"Peek",                "peek",        "Peek", 0, 1, 1, -1},
+};
 
 /* layout(s) */
-static const float mfact = 0.60; /* factor of master area size [0.05..0.95] */
-static const int nmaster = 1;    /* number of clients in master area */
+static const float mfact     = 0.60; /* factor of master area size [0.05..0.95] */
+static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0; /* 1 means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
     /* symbol     arrange function */
-    {"[]=", tile}, /* first entry is default */
-    {"><>", NULL}, /* no layout function means floating behavior */
+    {"[]=", tile},    /* first entry is default */
+    {"><>", NULL},    /* no layout function means floating behavior */
     {"[M]", monocle}, {"TTT", bstack}, {"===", bstackhoriz},
 };
 
@@ -97,12 +83,13 @@ static const Layout layouts[] = {
   }
 
 /* commands */
-static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = {"dmenu_dwm", "-m", dmenumon, NULL};
-static const char *termcmd[] = {"st", NULL};
-static const char *browsercmd[] = {"browse", NULL};
-static const char *passmenu[] = {"dmenu_pass", NULL};
-static const char *appfinder[] = {"xfce4-appfinder", NULL};
+static char dmenumon[2]         = "0"; /* component of dmenucmd, manipulated in spawn() */
+static const char *dmenucmd[]   = {"dmenu_dwm",  "-m", dmenumon, NULL};
+static const char *termcmd[]    = {"st",         NULL};
+static const char *browsercmd[] = {"browse",     NULL};
+static const char *passmenu[]   = {"dmenu_pass", NULL};
+static const char *appfinder[]  = {"launcher",   NULL};
+/* static const char *appfinder[]  = {"xfce4-appfinder", NULL}; */
 
 static Key keys[] = {
 					 /* modifier,                       key,                      function,
@@ -124,7 +111,6 @@ static Key keys[] = {
 					 {MODKEY, XK_h, setmfact, {.f = -0.05}},
 					 {MODKEY, XK_l, setmfact, {.f = +0.05}},
 					 {MODKEY, XK_BackSpace, zoom, {0}},
-					 /* {MODKEY, XK_Tab, view, {0}}, */
 					 {MODKEY, XK_q, killclient, {0}},
 					 {MODKEY, XK_t, setlayout, {.v = &layouts[0]}},
 					 {MODKEY, XK_f, setlayout, {.v = &layouts[1]}},
@@ -135,13 +121,8 @@ static Key keys[] = {
 					 {MODKEY | ShiftMask, XK_space, togglefloating, {0}},
 					 {MODKEY, XK_0, view, {.ui = ~0}},
 					 {MODKEY | ShiftMask, XK_0, tag, {.ui = ~0}},
-					 /* {MODKEY, XK_comma, focusmon, {.i = -1}}, */
-					 /* {MODKEY, XK_period, focusmon, {.i = +1}}, */
 					 {MODKEY, XK_Tab, focusmon, {.i = +1}},
 					 {MODKEY | ShiftMask, XK_Tab, tagmon, {.i = +1}},
-					 /* {MODKEY | ShiftMask, XK_Tab, tagandfocus, {.i = +1}}, */
-					 /* {MODKEY | ShiftMask, XK_comma, tagmon, {.i = -1}}, */
-					 /* {MODKEY | ShiftMask, XK_period, tagmon, {.i = +1}}, */
 					 {MODKEY, XK_minus, setgaps, {.i = -1}},
 					 {MODKEY, XK_plus, setgaps, {.i = +1}},
 					 {MODKEY | ShiftMask, XK_equal, setgaps, {.i = 0}},
