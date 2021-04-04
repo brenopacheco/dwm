@@ -49,11 +49,11 @@ static int def_layouts[1 + LENGTH(tags)] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
  */
 /*class, instance, title, tagsmask, iscentered, isfloating, monitor */
 static const Rule rules[] = {
-    /* {"Gnome-calculator", NULL,          NULL,   0, 1, 1, -1}, */
-    {"Sxiv",                "sxiv",        "sxiv", 0, 1, 1, -1},
-    {"File-roller",         "file-roller", NULL,   0, 1, 1, -1},
-    {"Thunar",              "thunar",      NULL,   0, 1, 1, -1},
-    {"Peek",                "peek",        "Peek", 0, 1, 1, -1},
+    {"Gnome-calculator", NULL,          NULL,   0, 1, 1, -1},
+    {"Sxiv",             "sxiv",        "sxiv", 0, 1, 1, -1},
+    {"File-roller",      "file-roller", NULL,   0, 1, 1, -1},
+    {"Thunar",           "thunar",      NULL,   0, 1, 1, -1},
+    {"Peek",             "peek",        "Peek", 0, 1, 1, -1},
 };
 
 /* layout(s) */
