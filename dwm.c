@@ -258,7 +258,7 @@ static void spawn(const Arg *arg);
 static void tabmode(const Arg *arg);
 static void tag(const Arg *arg);
 static void tagmon(const Arg *arg);
-static void tagandfocus(const Arg *arg);
+/* static void tagandfocus(const Arg *arg); */
 static void tile(Monitor *);
 static void bstack(Monitor *);
 static void bstackhoriz(Monitor *);
@@ -2016,13 +2016,13 @@ tagmon(const Arg *arg)
 	sendmon(selmon->sel, dirtomon(arg->i));
 }
 
-void
-tagandfocus(const Arg *arg)
-{
-    tagmon(arg);
-    focusmon(arg);
-    /* not working when sending from monitor to laptop */
-}
+/* void */
+/* tagandfocus(const Arg *arg) */
+/* { */
+/*     tagmon(arg); */
+/*     focusmon(arg); */
+/*     /1* not working when sending from monitor to laptop *1/ */
+/* } */
 
 void
 tile(Monitor *m)

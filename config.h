@@ -1,5 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 #include <X11/XF86keysym.h>
+#include <X11/keysymdef.h>
 
 /* appearance */
 static const char *xres = "/home/breno/.Xresources";
@@ -49,11 +50,12 @@ static int def_layouts[1 + LENGTH(tags)] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
  */
 /*class, instance, title, tagsmask, iscentered, isfloating, monitor */
 static const Rule rules[] = {
-    {"Gnome-calculator", NULL,          NULL,   0, 1, 1, -1},
-    {"Sxiv",             "sxiv",        "sxiv", 0, 1, 1, -1},
-    {"File-roller",      "file-roller", NULL,   0, 1, 1, -1},
-    {"Thunar",           "thunar",      NULL,   0, 1, 1, -1},
-    {"Peek",             "peek",        "Peek", 0, 1, 1, -1},
+    {"Gnome-calculator", NULL,              NULL,                 0, 1, 1, -1},
+    {"Sxiv",             "sxiv",            "sxiv",               0, 1, 1, -1},
+    {"File-roller",      "file-roller",     NULL,                 0, 1, 1, -1},
+    {"Thunar",           "thunar",          NULL,                 0, 1, 1, -1},
+    {"Peek",             "peek",            "Peek",               0, 1, 1, -1},
+    {"Xfce4-appfinder",  "xfce4-appfinder", "Application Finder", 0, 1, 1, -1}
 };
 
 /* layout(s) */
@@ -88,18 +90,24 @@ static const char *dmenucmd[]   = {"dmenu_dwm",  "-m", dmenumon, NULL};
 static const char *termcmd[]    = {"st",         NULL};
 static const char *browsercmd[] = {"browse",     NULL};
 static const char *passmenu[]   = {"dmenu_pass", NULL};
-static const char *appfinder[]  = {"launcher",   NULL};
-/* static const char *appfinder[]  = {"xfce4-appfinder", NULL}; */
+static const char *appfinder[]  = {"appfinder",   NULL};
+static const char *printscr[]   = {"screengrab", "-r",  NULL};
+/* static const char *volume_up[]     = {"volume", "inc",  NULL}; */
+/* static const char *volume_down[]   = {"volume", "dec",  NULL}; */
+/* static const char *volume_toggle[] = {"volume", "toggle",  NULL}; */
 
 static Key keys[] = {
 					 /* modifier,                       key,                      function,
 						argument */
-					 {MODKEY, XK_F5, xrdb, {.v = NULL}},
 					 {MODKEY, XK_d, spawn, {.v = dmenucmd}},
 					 {MODKEY, XK_apostrophe, spawn, {.v = appfinder}},
 					 {MODKEY, XK_w, spawn, {.v = browsercmd}},
 					 {MODKEY, XK_s, spawn, {.v = passmenu}},
 					 {MODKEY, XK_Return, spawn, {.v = termcmd}},
+					 {0, XK_Print, spawn, {.v = printscr}},
+					 /* {0, XF86XK_AudioMute, spawn, {.v = volume_toggle}}, */
+					 /* {0, XF86XK_AudioLowerVolume, spawn, {.v = volume_down}}, */
+					 /* {0, XF86XK_AudioRaiseVolume, spawn, {.v = volume_up}}, */
 					 {MODKEY, XK_b, togglebar, {0}},
 					 {MODKEY, XK_v, tabmode, {-1}},
 					 {MODKEY, XK_j, focusstack, {.i = +1}},
